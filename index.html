@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>X-BOX AI CHATBOT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="chat-container">
+        <div class="ai-chat-box">
+            <img src="ai.jpg" alt="" id="aiImage" width="70">
+            <div class="ai-chat-area">
+                Hello! How can I help you?
+            </div>
+        </div>
+    </div>
+
+    <div class="prompt-area">
+        <input type="text" id="prompt" placeholder="Message...">
+        <button id="image">
+            <img src="img.svg" alt="">
+            <input type="file" accept="image/*" hidden>
+        </button>
+        <button id="mic-btn"><img src="mic.svg" alt="Mic"></button>
+        <button id="submit"><img src="submit.svg" alt=""></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
