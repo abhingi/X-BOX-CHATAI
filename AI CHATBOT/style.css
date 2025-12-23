@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-container {
+    width: 100%;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.911);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.prompt-area {
+    width: 100%;
+    min-height: 80px;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.user-chat-box, .ai-chat-box {
+    width: 70%;
+    position: relative;
+}
+
+.user-chat-box { left: 30%; }
+
+.user-chat-area, .ai-chat-area {
+    width: 90%;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 10px black; /* Removed () */
+}
+
+.user-chat-area {
+    border-radius: 20px 0px 20px 20px;
+}
+
+.ai-chat-area {
+    position: relative;
+    left: 10%;
+    border-radius: 0px 20px 20px 20px;
+}
+
+#userImage { position: absolute; right: 0; filter: drop-shadow(2px 2px 5px black); }
+#aiImage { position: absolute; left: 0; filter: drop-shadow(2px 2px 5px black); }
+
+.prompt-area input {
+    width: 60%;
+    height: 50px;
+    background-color: black;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px;
+    color: aliceblue;
+    font-size: 16px; /* Prevents iOS zoom */
+    box-shadow: 2px 2px 10px black; /* Removed () */
+}
+
+.prompt-area button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mic-btn.active { background-color: #ff4d4d; }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .user-chat-box, .ai-chat-box { width: 90%; }
+    .user-chat-box { left: 10%; }
+}
